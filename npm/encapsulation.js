@@ -32,3 +32,5 @@ class person2{
 const obj2 = new person2(2,3)
 // console.log(obj2.#a) //not accessible outside the class because it is private
 obj2.func()
+//private properties wont get console logged
+console.log(obj2)
