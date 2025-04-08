@@ -15,14 +15,21 @@ class childclss extends parentcls{
         this.a = a
         this.b = b
     }
-    clidfunc = ()=>{
+    childfunc = ()=>{
         console.log("hello world",this.a,this.b)
     }
 }
 
-const obj = new childclss(1,2,3)
-console.log(
-    "object value :",obj
-)
+class superchild extends childclss{
+    constructor(a,b,c,d){
+        super(a,b,c)
+        this.d = d
+    }
+    superchildfunc = ()=>console.log(this.d)
+}
 
+const obj = new superchild(1,2,3,5)
+
+obj.childfunc()
+obj.superchildfunc()
 obj.parentfunc()
