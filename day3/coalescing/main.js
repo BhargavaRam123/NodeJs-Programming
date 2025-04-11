@@ -15,3 +15,11 @@ let userInput = null;
 let defaultValue = "Default";
 let result = userInput ?? defaultValue;
 console.log(result); // "Default" (because userInput is null)
+
+
+let count = 0;
+let fallbackCount = 10;
+let displayCount = count || fallbackCount; // 10 (because 0 is falsy)
+let actualCount = count ?? fallbackCount; // 0 (preserves 0 value)
+console.log("OR result:", displayCount);
+console.log("Nullish result:", actualCount);
