@@ -23,3 +23,10 @@ let displayCount = count || fallbackCount; // 10 (because 0 is falsy)
 let actualCount = count ?? fallbackCount; // 0 (preserves 0 value)
 console.log("OR result:", displayCount);
 console.log("Nullish result:", actualCount);
+
+
+let value1 = null;
+let value2 = undefined;
+let value3 = "Available";
+let finalValue = value1 ?? value2 ?? value3 ?? "Default";
+console.log(finalValue); // "Available" (first non-null/undefined value)
