@@ -10,3 +10,10 @@ console.log(!string)
 console.log(boolean + string)
 
 console.log(40 + true)
+
+
+const variable1 = false
+const variable2 = ""
+
+console.log(variable1 == variable2)
+// true
