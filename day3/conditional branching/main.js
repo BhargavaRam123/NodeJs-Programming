@@ -22,3 +22,9 @@ if (grade >= 90) {
 } else {
     console.log("F");
 }
+
+
+
+let age = 20;
+let message = age >= 18 ? "Adult" : "Minor";
+console.log(message);
