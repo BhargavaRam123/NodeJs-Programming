@@ -28,3 +28,14 @@ if (grade >= 90) {
 let age = 20;
 let message = age >= 18 ? "Adult" : "Minor";
 console.log(message);
+
+
+
+let username = "admin";
+let password = "secure123";
+
+if (username === "admin" && password === "secure123") {
+    console.log("Access granted");
+} else {
+    console.log("Access denied");
+}
