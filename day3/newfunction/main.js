@@ -14,3 +14,11 @@ func1()
 // let func = new Function(str);
 // func();
 
+//now lets see how the closure works with this
+
+function parentfunc(){
+    let variable = 10
+    const child = new Function('console.log(variable)')
+    return child
+}
+parentfunc()()
