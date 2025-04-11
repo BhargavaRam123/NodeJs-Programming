@@ -30,3 +30,16 @@ const variable4 = ""
 
 console.log(variable3 === variable4)
 // false
+
+//explicit type conversion
+
+
+let str = "32"
+let num = Number(str)
+console.log(num)
+console.log(typeof(num))
+
+
+let val = 0
+let bval = Boolean(val)
+console.log(bval)
