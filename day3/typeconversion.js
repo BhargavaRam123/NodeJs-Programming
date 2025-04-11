@@ -17,3 +17,16 @@ const variable2 = ""
 
 console.log(variable1 == variable2)
 // true
+
+
+const variable11 = 20
+const variable22 = "20"
+
+console.log(variable1 === variable2)
+// false
+
+const variable3 = false
+const variable4 = ""
+
+console.log(variable3 === variable4)
+// false
