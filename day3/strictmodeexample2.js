@@ -18,3 +18,10 @@ const o = {
     }
 }
 o.func = 12
+
+//implementing non extensible objects
+
+const random = {}
+Object.preventExtensions(random)
+random.name = "hello"
+
