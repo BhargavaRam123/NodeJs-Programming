@@ -53,3 +53,19 @@ switch (day) {
     default: dayName = "Weekend";
 }
 console.log(dayName);
+
+
+let isLoggedIn = true;
+let userRole = "admin";
+
+if (isLoggedIn) {
+    if (userRole === "admin") {
+        console.log("Admin dashboard");
+    } else if (userRole === "editor") {
+        console.log("Editor dashboard");
+    } else {
+        console.log("User dashboard");
+    }
+} else {
+    console.log("Please log in");
+}
