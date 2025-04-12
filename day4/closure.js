@@ -45,3 +45,13 @@ var moar = foo(5); // Closure
   onto the top of the call stack (see the screenshot below)
 */
 moar(15);
+
+
+// LexicalEnvironment = {
+//     EnvironmentRecord: {
+//     // Identifier bindings go here
+//     },
+  
+//     // Reference to the outer environment
+//     outer: < >
+//   };
