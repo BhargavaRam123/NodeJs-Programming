@@ -10,4 +10,8 @@ const func2=(phrase,name)=>{
     console.log(phrase,name)
 }
 
-setTimeout(func2,1000,"hello","john")
+let id = setTimeout(func2,1000,"hello","john")
+
+
+// console.log("id value",id)
+clearTimeout(id)
