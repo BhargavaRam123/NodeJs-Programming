@@ -28,3 +28,13 @@ for (var i = 0; i < 3; i++) {
       }, 100);
     })(i);
   }
+
+  (async function() {
+    try {
+      const response = await fetch('https://api.example.com/data');
+      const data = await response.json();
+      console.log('Data loaded:', data);
+    } catch (error) {
+      console.error('Failed to load data:', error);
+    }
+  })();
