@@ -86,3 +86,36 @@ const car = {
 makeSound(dog);    // Outputs: Woof!
 makeSound(person); // Outputs: Hello!
 makeSound(car);    // Outputs: Vroom!
+
+
+//polymorphism overriding
+// Parent class
+class Animal {
+  speak() {
+    return "Some sound";
+  }
+}
+
+// Child classes
+class Dog extends Animal {
+  speak() {
+    return "Woof!";
+  }
+}
+
+class Cat extends Animal {
+  speak() {
+    return "Meow!";
+  }
+}
+
+// Polymorphic behavior
+const animals = [new Animal(), new Dog(), new Cat()];
+
+animals.forEach(animal => {
+  console.log(animal.speak());
+});
+// Output:
+// Some sound
+// Woof!
+// Meow!
