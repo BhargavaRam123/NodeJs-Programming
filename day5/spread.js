@@ -13,3 +13,16 @@ function sum(a, b, c) {
 }
 const numbers = [1, 2, 3];
 sum(...numbers); // Equivalent to sum(1, 2, 3)
+
+// Merging objects
+const obj1 = { a: 1, b: 2 };
+const obj2 = { c: 3, d: 4 };
+const merged = { ...obj1, ...obj2 }; // { a: 1, b: 2, c: 3, d: 4 }
+
+// Cloning objects
+const original1 = { x: 1, y: 2 };
+const clone = { ...original1 }; // { x: 1, y: 2 }
+
+// Override properties
+const base = { a: 1, b: 2 };
+const override = { ...base, b: 3 }; // { a: 1, b: 3 }
