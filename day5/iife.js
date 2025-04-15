@@ -12,3 +12,19 @@
     privateFunction();
   })();
   
+
+  // Problem with closures in loops
+for (var i = 0; i < 3; i++) {
+    setTimeout(function() {
+      console.log(i); // Will log "3" three times
+    }, 100);
+  }
+  
+  // Solution using IIFE
+  for (var i = 0; i < 3; i++) {
+    (function(index) {
+      setTimeout(function() {
+        console.log(index); // Will log 0, 1, 2
+      }, 100);
+    })(i);
+  }
