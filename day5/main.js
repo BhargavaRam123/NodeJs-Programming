@@ -62,3 +62,27 @@ function areObjectsEqual(obj1, obj2) {
     user:"bhargav"
   }
 ducktyping(obj)
+
+//duck typing polymorphism
+function makeSound(soundMaker) {
+  // We don't care what type the object is, only that it has a speak method
+  console.log(soundMaker.speak());
+}
+
+// These don't need to inherit from the same class
+const dog = {
+  speak: () => "Woof!"
+};
+
+const person = {
+  speak: () => "Hello!"
+};
+
+const car = {
+  honk: () => "Beep!",
+  speak: () => "Vroom!"
+};
+
+makeSound(dog);    // Outputs: Woof!
+makeSound(person); // Outputs: Hello!
+makeSound(car);    // Outputs: Vroom!
