@@ -80,3 +80,16 @@ const p = new Person("Jane", "Smith");
 console.log(p.fullName); // Jane Smith
 p.fullName = "Sarah Johnson";
 console.log(p.fullName); // Sarah Johnson
+
+// 2. Object with Methods
+const calculator = {
+    add: function(a, b) {
+        return a + b;
+    },
+    subtract: function(a, b) {
+        return a - b;
+    },
+    multiply: function(a, b) {
+        return a * b;
+    }
+};
