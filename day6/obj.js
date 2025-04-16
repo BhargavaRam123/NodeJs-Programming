@@ -53,3 +53,19 @@ class BankAccount {
         }
     }
 }
+
+class PrivateCounter {
+    #count = 0;  // Private field
+
+    increment() {
+        this.#count++;
+    }
+
+    decrement() {
+        this.#count--;
+    }
+
+    getCount() {
+        return this.#count;
+    }
+}
