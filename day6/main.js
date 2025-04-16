@@ -132,3 +132,8 @@ class bird extends Animal {
 }
 
 const animal = new Animal("Generic Animal");
+
+//polymorphism in js
+animal.speak(); // Generic Animal makes a noise.
+const dog = new Animal("Dog");
+dog.speak(); // Dog makes a noise.
