@@ -10,3 +10,15 @@ class Employee extends Person {
         return `${this.getFullName()} - ${this.jobTitle}`;
     }
 }
+
+class MathOperations {
+    static PI = 3.14159;
+
+    static calculateCircleArea(radius) {
+        return this.PI * radius * radius;
+    }
+
+    static compareNumbers(a, b) {
+        return a > b ? a : b;
+    }
+}
