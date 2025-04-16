@@ -109,3 +109,26 @@ const temperature = {
         this._celsius = value;
     }
 };
+
+//inheritance in js using extends and super
+class Animal {
+    constructor(name) {
+        this.name = name;
+    }
+    
+    speak() {
+        console.log(`${this.name} makes a noise.`);
+    }
+}
+
+class bird extends Animal {
+    constructor(name) {
+        super(name); // Call the parent constructor
+    }
+    
+    speak() {
+        console.log(`${this.name} chirps.`);
+    }
+}
+
+const animal = new Animal("Generic Animal");
