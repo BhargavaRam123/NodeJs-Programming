@@ -93,3 +93,19 @@ const calculator = {
         return a * b;
     }
 };
+
+const temperature = {
+    _celsius: 0,
+    get fahrenheit() {
+        return (this._celsius * 9/5) + 32;
+    },
+    set fahrenheit(value) {
+        this._celsius = (value - 32) * 5/9;
+    },
+    get celsius() {
+        return this._celsius;
+    },
+    set celsius(value) {
+        this._celsius = value;
+    }
+};
