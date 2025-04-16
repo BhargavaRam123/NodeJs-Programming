@@ -22,3 +22,34 @@ class MathOperations {
         return a > b ? a : b;
     }
 }
+
+class BankAccount {
+    constructor(accountHolder, balance = 0) {
+        this._balance = balance;
+        this._accountHolder = accountHolder;
+    }
+
+    get balance() {
+        return this._balance;
+    }
+
+    set balance(newBalance) {
+        if (newBalance >= 0) {
+            this._balance = newBalance;
+        } else {
+            throw new Error("Balance cannot be negative");
+        }
+    }
+
+    deposit(amount) {
+        if (amount > 0) {
+            this._balance += amount;
+        }
+    }
+
+    withdraw(amount) {
+        if (amount > 0 && amount <= this._balance) {
+            this._balance -= amount;
+        }
+    }
+}
