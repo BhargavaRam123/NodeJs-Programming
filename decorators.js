@@ -29,3 +29,15 @@ let worker = {
   worker.slow = cachingDecorator(worker.slow); // now make it caching
   
   alert( worker.slow(2) ); // Whoops! Error: Cannot read property 'someMethod' of undefined
+
+
+  function sayHi() {
+    alert(this.name);
+  }
+  
+  let user = { name: "John" };
+  let admin = { name: "Admin" };
+  
+  // use call to pass different objects as "this"
+  sayHi.call( user ); // John
+  sayHi.call( admin ); // Admin
