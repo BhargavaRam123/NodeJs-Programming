@@ -66,7 +66,7 @@ class Admin {
     }
     getalladmins(){
         this.admins.map((o)=>{
-            console.log("Admin name:",o.name)
+            console.log("Admin name:",o)
         })
     }
 
@@ -87,3 +87,4 @@ const admin = new Admin("mainchar")
 admin.usepowerofadmintodec(b1)
 
 b1.getborrowers()
+admin.getalladmins()
