@@ -1,9 +1,19 @@
 class Book{
-    constructor(id,name,author,pages){
+    constructor(id,name,author,pages,copies){
         this.id = id
         this.name = name
         this.author = author
         this.pages = pages
+        this.copies = copies
+    }
+    decrementcopy()
+    {
+        console.log("book is borrowed")
+        this.copies--
+    }
+    getavailablecopies()
+    {
+        return this.copies
     }
 
 }
@@ -30,7 +40,7 @@ class libMember{
 
 //creating a newbook
 
-const b1 = new Book(1,"book1","auth1",100)
+const b1 = new Book(1,"book1","auth1",100,10)
 
 const m1 = new libMember("bhargav",20,12)
 
