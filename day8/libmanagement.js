@@ -31,4 +31,4 @@ class libMember{
 
 const b1 = new Book(1,"book1","auth1",100)
 
-const m1 
+const m1 = new libMember("bhargav",20,12)
