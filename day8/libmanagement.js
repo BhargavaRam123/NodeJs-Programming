@@ -42,12 +42,30 @@ class libMember{
 
 }
 
+class Admin {
+    constructor(name)
+    {
+        this.name = name
+    }
+    usepowerofadmintodec(bobj)
+    {
+        if(bobj.copies>0)
+        bobj.copies--
+        else
+        console.log("there are no copies to remove the books")
+    }
+}
+
 //creating a newbook
 
-const b1 = new Book(1,"book1","auth1",100,1)
+const b1 = new Book(1,"book1","auth1",100,10)
 
 const m1 = new libMember("bhargav",20,12)
 
 m1.borrowbook(b1)
-m1.borrowbook(b1)
+// m1.borrowbook(b1)
 m1.getborrowedbooks()
+
+const admin = new Admin("mainchar")
+
+admin.usepowerofadmintodec(b1)
