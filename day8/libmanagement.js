@@ -1,5 +1,6 @@
 class Book{
-    constructor(name,author,pages){
+    constructor(id,name,author,pages){
+        this.id = id
         this.name = name
         this.author = author
         this.pages = pages
@@ -8,7 +9,7 @@ class Book{
 }
 
 
-class Member{
+class libMember{
     #borrowedbooks
     constructor(name,age,validity)
     {
@@ -25,3 +26,9 @@ class Member{
     }
 
 }
+
+//creating a newbook
+
+const b1 = new Book(1,"book1","auth1",100)
+
+const m1 
