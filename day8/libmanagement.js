@@ -47,6 +47,10 @@ class libMember{
         console.log("borrowed books are:")
         this.#borrowedbooks.map((a)=>console.log(a))
     }
+    returnbook(id)
+    {
+        this.#borrowedbooks = this.#borrowedbooks.filter((a)=>a.id!==id)
+    }
 
 }
 
