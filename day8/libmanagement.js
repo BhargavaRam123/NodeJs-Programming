@@ -16,5 +16,12 @@ class Member{
         this.age = age
         this.validity = validity
     }
+    borrowbook(bookid) {
+        this.#borrowedbooks.push(bookid)
+    }
+    getborrowedbooks(){
+        console.log("borrowed books are:")
+        this.#borrowedbooks.map((a)=>console.log(a))
+    }
 
 }
