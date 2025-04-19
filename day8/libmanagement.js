@@ -14,6 +14,7 @@ class libMember{
     constructor(name,age,validity)
     {
         this.name = name
+        this.#borrowedbooks = []
         this.age = age
         this.validity = validity
     }
@@ -32,3 +33,6 @@ class libMember{
 const b1 = new Book(1,"book1","auth1",100)
 
 const m1 = new libMember("bhargav",20,12)
+
+m1.borrowbook(1)
+m1.getborrowedbooks()
