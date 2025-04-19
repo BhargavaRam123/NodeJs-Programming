@@ -18,7 +18,10 @@ class Book{
         return this.copies
     }
     getborrowers(){
-        this.borrowers((a)=>console.log(a))
+        this.borrowers.map((a)=>{
+            
+            console.log("name:",a.name)
+        })
     }
 
 }
@@ -74,3 +77,5 @@ m1.getborrowedbooks()
 const admin = new Admin("mainchar")
 
 admin.usepowerofadmintodec(b1)
+
+b1.getborrowers()
