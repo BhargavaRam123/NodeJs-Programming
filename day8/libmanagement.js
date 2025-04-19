@@ -51,9 +51,11 @@ class libMember{
 }
 
 class Admin {
+    admins = []
     constructor(name)
     {
         this.name = name
+        this.admins.push(name)
     }
     usepowerofadmintodec(bobj)
     {
@@ -62,6 +64,12 @@ class Admin {
         else
         console.log("there are no copies to remove the books")
     }
+    getalladmins(){
+        this.admins.map((o)=>{
+            console.log("Admin name:",o.name)
+        })
+    }
+
 }
 
 //creating a newbook
