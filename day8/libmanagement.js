@@ -18,8 +18,8 @@ class libMember{
         this.age = age
         this.validity = validity
     }
-    borrowbook(bookid) {
-        this.#borrowedbooks.push(bookid)
+    borrowbook(bookobj) {
+        this.#borrowedbooks.push(bookobj)
     }
     getborrowedbooks(){
         console.log("borrowed books are:")
@@ -34,5 +34,5 @@ const b1 = new Book(1,"book1","auth1",100)
 
 const m1 = new libMember("bhargav",20,12)
 
-m1.borrowbook(1)
+m1.borrowbook(b1)
 m1.getborrowedbooks()
