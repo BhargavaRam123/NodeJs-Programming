@@ -1,4 +1,5 @@
 class Book{
+    borrowers = []
     constructor(id,name,author,pages,copies){
         this.id = id
         this.name = name
@@ -6,14 +7,18 @@ class Book{
         this.pages = pages
         this.copies = copies
     }
-    decrementcopy()
+    decrementcopy(mem)
     {
         console.log("book is borrowed")
+        this.borrowers.push(mem)
         this.copies--
     }
     getavailablecopies()
     {
         return this.copies
+    }
+    getborrowers(){
+        this.borrowers((a)=>console.log(a))
     }
 
 }
@@ -30,7 +35,7 @@ class libMember{
     }
     borrowbook(bookobj) {
         if(bookobj.getavailablecopies()>0){
-            bookobj.decrementcopy()
+            bookobj.decrementcopy(this)
         this.#borrowedbooks.push(bookobj)}
         else
         console.log("The book you are trying to borrow is not available")
