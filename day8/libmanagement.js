@@ -29,9 +29,9 @@ class libMember{
         this.validity = validity
     }
     borrowbook(bookobj) {
-        bookobj.decrementcopy()
-        if(bookobj.getavailablecopies()>0)
-        this.#borrowedbooks.push(bookobj)
+        if(bookobj.getavailablecopies()>0){
+            bookobj.decrementcopy()
+        this.#borrowedbooks.push(bookobj)}
         else
         console.log("The book you are trying to borrow is not available")
     }
@@ -44,9 +44,10 @@ class libMember{
 
 //creating a newbook
 
-const b1 = new Book(1,"book1","auth1",100,10)
+const b1 = new Book(1,"book1","auth1",100,1)
 
 const m1 = new libMember("bhargav",20,12)
 
+m1.borrowbook(b1)
 m1.borrowbook(b1)
 m1.getborrowedbooks()
