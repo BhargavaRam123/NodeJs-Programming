@@ -23,6 +23,9 @@ class Book{
             console.log("name:",a.name)
         })
     }
+    returnbook(){
+        this.copies++
+    }
 
 }
 
@@ -47,9 +50,10 @@ class libMember{
         console.log("borrowed books are:")
         this.#borrowedbooks.map((a)=>console.log(a))
     }
-    returnbook(id)
+    returnbook(id,bobj)
     {
         this.#borrowedbooks = this.#borrowedbooks.filter((a)=>a.id!==id)
+        bobj.returnbook()
     }
 
 }
@@ -92,3 +96,5 @@ admin.usepowerofadmintodec(b1)
 
 b1.getborrowers()
 admin.getalladmins()
+
+m1.returnbook(1,b1)
