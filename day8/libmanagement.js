@@ -29,7 +29,11 @@ class libMember{
         this.validity = validity
     }
     borrowbook(bookobj) {
+        bookobj.decrementcopy()
+        if(bookobj.getavailablecopies()>0)
         this.#borrowedbooks.push(bookobj)
+        else
+        console.log("The book you are trying to borrow is not available")
     }
     getborrowedbooks(){
         console.log("borrowed books are:")
